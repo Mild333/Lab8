@@ -10,7 +10,7 @@ void loop() {
       Serial0.prinln('1');
       Serial0.prinln("ส่งข้อมูล 1 แล้ว");
     }
-    else if (Serial.read() == '0')){
+    else if (Serial.read() == '0'){
       Serial0.prinln('0');
       Serial0.prinln("ส่งช้อมูล 0 แล้ว");
     }
