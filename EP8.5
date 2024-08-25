@@ -1,1 +1,18 @@
-
+void setup() {
+  
+  Serial.begin(9600);
+  pinMode(17,INTPUT);
+  pinMode(13,OUTPUT);
+}
+void loop() {
+  
+  while (Serial0.available() > 0) {
+    char a = Serial0.read();
+    if(a == '1'){
+      digitalWrite(13, HIGH);
+    }
+    else if(a == '0'){
+      digitalWrite(13, LOW);
+    }
+  }
+}
