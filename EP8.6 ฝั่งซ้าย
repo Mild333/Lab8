@@ -1,1 +1,41 @@
+void setup() {
+  
+  Serial.begin(9600);
+  pinMode(17,INTPUT);
+  pinMode(18,INTPUT);
+  pinMode(19,INTPUT);
+  pinMode(13,OUTPUT);
+}
+void loop() {
+  
+  while (Serial0.available() > 0) {
+    char a = Serial0.read();
+    if(a == '1'){
+      digitalWrite(13, HIGH);
+      delay(250);
+    }
+    else if(a == '0'){
+      digitalWrite(13, LOW);
+    }
+  }
 
+  int a = 0;
+  int b = 0;
+  int c = 0;
+  a = digitalRead(17);
+  b = digitalRead(18);
+  c = digitalRead(19);
+    if (a == 1){
+      Serial0.prinln('a');
+    }
+    else if (b == 1){
+      Serial0.prinln('b');
+    }
+    else if (c == 1){
+      Serial0.prinln('c');
+    }
+    else {
+      Serial0.prinln('0');
+    }
+    delay(100);
+}
