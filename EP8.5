@@ -15,4 +15,14 @@ void loop() {
       digitalWrite(13, LOW);
     }
   }
+
+  int a = 0;
+  a = digitalRead(17);
+      if (a == 1){
+      Serial0.prinln('1');
+    }
+    else if (a == 0){
+      Serial0.prinln('0');
+    }
+    delay(100);
 }
