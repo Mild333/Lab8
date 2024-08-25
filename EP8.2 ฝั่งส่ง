@@ -1,0 +1,17 @@
+void setup() {
+ 
+  Serial.begin(9600); 
+  Serial0.begin(9600); 
+}
+
+void loop() {
+
+    if(Serial.read() == '1'){
+      Serial0.prinln('1');
+      Serial0.prinln("ส่งข้อมูล 1 แล้ว");
+    }
+    else if (Serial.read() == '0')){
+      Serial0.prinln('0');
+      Serial0.prinln("ส่งช้อมูล 0 แล้ว");
+    }
+}
